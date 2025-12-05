@@ -1,0 +1,147 @@
+Notebook[{Cell[
+BoxData[{RowBox[{"\n",RowBox[{RowBox[{"nSides"," ","="," ","6"}],";"}]}],"\n",RowBox[
+{RowBox[{"sideLength"," ","="," ","1"}],";"}],"\n",RowBox[{RowBox[{"height"," ","="," ","3"}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{"bottomPolygon"," ","="," ","\n","  ",RowBox[{"Table","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"sideLength"," ",RowBox[{"Cos","[",RowBox[{"2"," ","Pi"," ",RowBox[
+{"k","/","nSides"}]}],"]"}]}],","," ",RowBox[{"sideLength"," ",RowBox[{"Sin","[",RowBox[
+{"2"," ","Pi"," ",RowBox[{"k","/","nSides"}]}],"]"}]}],","," ","0"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"k",","," ","0",","," ",RowBox[{"nSides"," ","-"," ","1"}]}],"}"}]}],"]"}]}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{RowBox[{"topPolygon"," ","="," ",RowBox[{"bottomPolygon"," ","+"," ",RowBox[
+{"{",RowBox[{"0",","," ","0",","," ","height"}],"}"}]}]}],";"}]," "}],RowBox[{"\n","\n","\n"}],RowBox[
+{RowBox[{"topPolygon"," ","="," ",RowBox[{"Map","[",RowBox[{RowBox[{RowBox[{"#"," ","+"," ",RowBox[
+{"{",RowBox[{"0",","," ","0",","," ","height"}],"}"}]}]," ","&"}],","," ","bottomPolygon"}],"]"}]}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{"faces"," ","="," ",RowBox[{"Join","[","\n","   ",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"Polygon","[","bottomPolygon","]"}],","," ",RowBox[{"Polygon","[","topPolygon","]"}]}],"}"}],","," ","\n","   ",RowBox[
+{"Table","[",RowBox[{RowBox[{"Polygon","[",RowBox[{"{",RowBox[{RowBox[{"bottomPolygon","[",RowBox[
+{"[","k","]"}],"]"}],","," ",RowBox[{"bottomPolygon","[",RowBox[{"[",RowBox[{RowBox[
+{"Mod","[",RowBox[{"k",","," ","nSides"}],"]"}]," ","+"," ","1"}],"]"}],"]"}],","," ","\n","      ",RowBox[
+{"topPolygon","[",RowBox[{"[",RowBox[{RowBox[{"Mod","[",RowBox[{"k",","," ","nSides"}],"]"}]," ","+"," ","1"}],"]"}],"]"}],","," ",RowBox[
+{"topPolygon","[",RowBox[{"[","k","]"}],"]"}]}],"}"}],"]"}],","," ",RowBox[{"{",RowBox[
+{"k",","," ","1",","," ","nSides"}],"}"}]}],"]"}]}],"\n","   ","]"}]}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{"Graphics3D","[",RowBox[{RowBox[{"{",RowBox[{RowBox[
+{"Directive","[",RowBox[{"Thick",","," ","Black"}],"]"}],","," ","\n","  ","LightGray",","," ","\n","  ","faces"}],"}"}],","," ",RowBox[
+{"Boxed"," ","\[Rule]"," ","False"}],","," ",RowBox[{"Axes"," ","\[Rule]"," ","False"}]}],"]"}],"\n","\n","\n"}]}],
+"Input",CellLabel -> "In[1]:= ",ExpressionUUID -> "b35d157d-5b98-4668-8b8f-ab79f20fdf0c"],Cell[
+BoxData[
+TemplateBox[{"Thread","tdlen","\"Objects of unequal length in \\!\\(\\*TagBox[RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"1\\\", \\\",\\\", \\\"0\\\", \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{FractionBox[\\\"1\\\", \\\"2\\\"], \\\",\\\", FractionBox[SqrtBox[\\\"3\\\"], \\\"2\\\"], \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", FractionBox[\\\"1\\\", \\\"2\\\"]}], \\\",\\\", FractionBox[SqrtBox[\\\"3\\\"], \\\"2\\\"], \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", \\\"1\\\"}], \\\",\\\", \\\"0\\\", \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"-\\\", FractionBox[\\\"1\\\", \\\"2\\\"]}], \\\",\\\", RowBox[{\\\"-\\\", FractionBox[SqrtBox[\\\"3\\\"], \\\"2\\\"]}], \\\",\\\", \\\"0\\\"}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{FractionBox[\\\"1\\\", \\\"2\\\"], \\\",\\\", RowBox[{\\\"-\\\", FractionBox[SqrtBox[\\\"3\\\"], \\\"2\\\"]}], \\\",\\\", \\\"0\\\"}], \\\"}\\\"}]}], \\\"}\\\"}], \\\"+\\\", RowBox[{\\\"{\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"0\\\", \\\",\\\", \\\"3\\\"}], \\\"}\\\"}]}], Short[#1, 5] & ]\\) cannot be combined.\"",2,5,1,18794594197110980305,"Local"},
+"MessageTemplate"],StandardForm],"MSG","Message",ExpressionUUID -> "34a6bd37-ecb0-4b30-8883-f21d03c52197"],Cell[
+BoxData[
+Graphics3DBox[{Directive[Thickness[Large],GrayLevel[0]],GrayLevel[0.85`],{Polygon3DBox[
+NCache[{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}},{{1,0,0},{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},{-1,0,0},{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0}}]],Polygon3DBox[
+NCache[{{1,0,3},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],3},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],3},{-1,0,3},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],3},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],3}},{{1,0,3},{0.5`,0.8660254037844386`,3},{-0.5`,0.8660254037844386`,3},{-1,0,3},{-0.5`,-0.8660254037844386`,3},{0.5`,-0.8660254037844386`,3}}]],Polygon3DBox[
+NCache[{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],3},{1,0,3}},{{1,0,0},{0.5`,0.8660254037844386`,0},{0.5`,0.8660254037844386`,3},{1,0,3}}]],Polygon3DBox[
+NCache[{{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,
+2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],3},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],3}},{{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,3},{0.5`,0.8660254037844386`,3}}]],Polygon3DBox[
+NCache[{{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{-1,0,3},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],3}},{{-0.5`,0.8660254037844386`,0},{-1,0,0},{-1,0,3},{-0.5`,0.8660254037844386`,3}}]],Polygon3DBox[
+NCache[{{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],3},{-1,0,3}},{{-1,0,0},{-0.5`,-0.8660254037844386`,0},{-0.5`,-0.8660254037844386`,3},{-1,0,3}}]],Polygon3DBox[
+NCache[{{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[
+-1,2],Power[3,Rational[1,2]]],3},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[
+1,2]]],3}},{{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,3},{-0.5`,-0.8660254037844386`,3}}]],Polygon3DBox[
+NCache[{{Rational[1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{1,0,0},{1,0,3},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],3}},{{0.5`,-0.8660254037844386`,0},{1,0,0},{1,0,3},{0.5`,-0.8660254037844386`,3}}]]}},
+Boxed -> False,Axes -> False,ExpressionUUID -> "6587998e-ddf2-4d42-bec0-8dcf6e36150c"],
+StandardForm],"Output",CellLabel -> "Out[8]= ",ExpressionUUID -> "f16e333d-956e-4b87-9552-285b059e8051"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "352a6e1b-dbf9-438d-b903-f62d1a83cf56"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "ba7c9508-4db4-4ec9-839b-f4a2d2b46c39"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "533e31c2-8168-44fe-97f4-e4c3374faae1"],Cell[
+CellGroupData[
+{Cell[
+BoxData[""],"Input",ExpressionUUID -> "dad4dba1-5219-475c-a91b-d02f1e3f609d"],Cell[
+BoxData[
+Graphics3DBox[{EdgeForm[Thickness[Large]],FaceForm[GrayLevel[0.85`]],{Polygon3DBox[
+NCache[{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}},{{1,0,0},{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},{-1,0,0},{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0}}]],Polygon3DBox[
+CompressedData["1:eJxTTMoPSmNiYGAoZgESATmlxWnMMJ5PZnFJJpBmgBAg8TQ2ZEk0pYxwpSACVRJiBweQCEosyczPS8yBKAcJQ+RYgURIZm5qMXFKA/LLU4sgbsKjnjiX/AeCAXAJxF7iA4wEZ2JRSs0AIyHqKHMJAEXEhTA="]],Polygon3DBox[
+NCache[{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{{1,0,0},{Rational[
+1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}},{0,0,3}},
+{{1,0,0},{0.5`,0.8660254037844386`,0},{{1,0,0},{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},{-1,0,0},{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0}},{0,0,3}}]],Polygon3DBox[
+NCache[{{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,
+2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},Part[Plus[{0,0,3},{{1,0,0},{Rational[
+1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],
+3],{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}},{{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],3],{{1,0,0},{0.5`,0.8660254037844386`,0},{-0.5`,0.8660254037844386`,0},{-1,0,0},{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0}}}]],Polygon3DBox[
+NCache[{{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],4],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],3]},{{-0.5`,0.8660254037844386`,0},{-1,0,0},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],4],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],3]}]],Polygon3DBox[NCache[
+{{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},Part[Plus[
+{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],5],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],4]},{{-1,0,0},{-0.5`,-0.8660254037844386`,0},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],5],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],4]}]],Polygon3DBox[NCache[
+{{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},Part[Plus[{0,0,3},{{1,0,0},{Rational[1,
+2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],
+6],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[
+-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[
+-1,2],Power[3,Rational[1,2]]],0}}],5]},{{-0.5`,-0.8660254037844386`,0},{0.5`,-0.8660254037844386`,0},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],6],Part[Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[
+1,2],Power[3,Rational[1,2]]],0},{Rational[-1,2],Times[Rational[1,2],Power[3,Rational[
+1,2]]],0},{-1,0,0},{Rational[-1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[
+1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0}}],5]}]],Polygon3DBox[NCache[
+{{Rational[1,2],Times[Rational[-1,2],Power[3,Rational[1,2]]],0},{1,0,0},{0,0,3},Part[
+Plus[{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],6]},{{0.5`,-0.8660254037844386`,0},{1,0,0},{0,0,3},Part[Plus[
+{0,0,3},{{1,0,0},{Rational[1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{Rational[
+-1,2],Times[Rational[1,2],Power[3,Rational[1,2]]],0},{-1,0,0},{Rational[-1,2],Times[
+Rational[-1,2],Power[3,Rational[1,2]]],0},{Rational[1,2],Times[Rational[-1,2],Power[
+3,Rational[1,2]]],0}}],6]}]]}},Boxed -> False,Axes -> False,ExpressionUUID -> "6c919ca6-0532-478c-9722-eb7ee5d2e83d"],
+StandardForm],"Output",CellLabel -> "Out[99]= ",ExpressionUUID -> "a7faf55d-37c5-4556-bbda-ecdc7bdd1218"]},
+Open],ExpressionUUID -> "b4bd7b92-6194-4919-a291-066f04633743"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.1 for Wolfram Cloud 1.69.0.1 (September 4, 2024)"]

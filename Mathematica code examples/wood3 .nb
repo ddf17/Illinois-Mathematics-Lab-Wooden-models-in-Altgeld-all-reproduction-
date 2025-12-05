@@ -1,0 +1,36 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[{RowBox[{"\n",RowBox[{RowBox[{"A1"," ","="," ",RowBox[
+{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}]}],";"}]}],"\n",RowBox[{RowBox[{"B1"," ","="," ",RowBox[
+{"{",RowBox[{"2",","," ","0",","," ","0"}],"}"}]}],";"}],"\n",RowBox[{RowBox[{"C1"," ","="," ",RowBox[
+{"{",RowBox[{"1",","," ",RowBox[{"Sqrt","[","3","]"}],","," ","0"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"D1"," ","="," ",RowBox[{"{",RowBox[{"0",","," ","0",","," ","2"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"E1"," ","="," ",RowBox[{"{",RowBox[{"2",","," ","0",","," ","2"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"F1"," ","="," ",RowBox[{"{",RowBox[{"1",","," ",RowBox[{"Sqrt","[","3","]"}],","," ","2"}],"}"}]}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{"faces"," ","="," ",RowBox[{"{","\n","   ",RowBox[
+{RowBox[{"Polygon","[",RowBox[{"{",RowBox[{"A1",","," ","B1",","," ","C1"}],"}"}],"]"}],","," ","\n","   ",RowBox[
+{"Polygon","[",RowBox[{"{",RowBox[{"D1",","," ","E1",","," ","F1"}],"}"}],"]"}],","," ","\n","   ",RowBox[
+{"Polygon","[",RowBox[{"{",RowBox[{"A1",","," ","B1",","," ","E1",","," ","D1"}],"}"}],"]"}],","," ","\n","   ",RowBox[
+{"Polygon","[",RowBox[{"{",RowBox[{"B1",","," ","C1",","," ","F1",","," ","E1"}],"}"}],"]"}],","," ","\n","   ",RowBox[
+{"Polygon","[",RowBox[{"{",RowBox[{"C1",","," ","A1",","," ","D1",","," ","F1"}],"}"}],"]"}]}],"  ","\n","   ","}"}]}],";"}],RowBox[
+{"\n","\n","\n"}],RowBox[{RowBox[{"Graphics3D","[",RowBox[{RowBox[{"{",RowBox[{RowBox[
+{"Opacity","[",RowBox[{"0.5",","," ","Brown"}],"]"}],","," ","\n","  ",RowBox[{"EdgeForm","[",RowBox[
+{"Directive","[",RowBox[{"Dashed",","," ",RowBox[{"Darker","[","Brown","]"}]}],"]"}],"]"}],","," ","faces",","," ","Blue",","," ","\n","  ",RowBox[
+{"PointSize","[","Large","]"}],","," ",RowBox[{"Point","[",RowBox[{"{",RowBox[{"A1",","," ","B1",","," ","C1",","," ","D1",","," ","E1",","," ","F1"}],"}"}],"]"}]}],"}"}],","," ","\n"," ",RowBox[
+{"Boxed"," ","\[Rule]"," ","False"}],","," ",RowBox[{"Axes"," ","\[Rule]"," ","True"}]}],"]"}],"\n","\n","\n","\n"}]}],
+"Input",ExpressionUUID -> "d5eaa159-c131-455b-b242-00375198e6bb"],Cell[
+BoxData[Graphics3DBox[
+{Directive[Opacity[0.5`],RGBColor[0.6`,0.4`,0.2`]],EdgeForm[Directive[Dashing[{Small,Small}],
+RGBColor[0.4`,0.2666666666666667`,0.13333333333333336`]]],{Polygon3DBox[NCache[{{0,0,0},{2,0,0},{1,Power[
+3,Rational[1,2]],0}},{{0,0,0},{2,0,0},{1,1.7320508075688772`,0}}]],Polygon3DBox[NCache[
+{{0,0,2},{2,0,2},{1,Power[3,Rational[1,2]],2}},{{0,0,2},{2,0,2},{1,1.7320508075688772`,2}}]],Polygon3DBox[
+{{0,0,0},{2,0,0},{2,0,2},{0,0,2}}],Polygon3DBox[NCache[{{2,0,0},{1,Power[3,Rational[
+1,2]],0},{1,Power[3,Rational[1,2]],2},{2,0,2}},{{2,0,0},{1,1.7320508075688772`,0},{1,1.7320508075688772`,2},{2,0,2}}]],Polygon3DBox[
+NCache[{{1,Power[3,Rational[1,2]],0},{0,0,0},{0,0,2},{1,Power[3,Rational[1,2]],2}},
+{{1,1.7320508075688772`,0},{0,0,0},{0,0,2},{1,1.7320508075688772`,2}}]]},RGBColor[
+0,0,1],PointSize[Large],Point3DBox[NCache[{{0,0,0},{2,0,0},{1,Power[3,Rational[1,
+2]],0},{0,0,2},{2,0,2},{1,Power[3,Rational[1,2]],2}},{{0,0,0},{2,0,0},{1,1.7320508075688772`,0},{0,0,2},{2,0,2},{1,1.7320508075688772`,2}}]]},
+Boxed -> False,Axes -> True,ExpressionUUID -> "619e9dc8-ebd4-41d7-bdab-47b52e650b01"],
+StandardForm],"Output",CellLabel -> "Out[43]= ",ExpressionUUID -> "10e43356-d783-42b8-b77b-bcbd4942e790"]},
+Open],ExpressionUUID -> "e842a4aa-4d3e-4a5f-92b7-69bc822b86b5"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.1 for Wolfram Cloud 1.69 (July 16, 2024)"]
